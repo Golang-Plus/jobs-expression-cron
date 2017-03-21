@@ -28,9 +28,9 @@ var (
 	Hourly   = predefined("@hourly")   // every hour at the beginning of the hour
 )
 
-// New returns a new cron expression.
+// NewExpression returns a new cron expression.
 // We use github.com/gorhill/cronexpr for parsing cron express inside.
-func New(expr string) (jobs.Expression, error) {
+func NewExpression(expr string) (jobs.Expression, error) {
 	cronexpr, err := cronexpr.Parse(expr)
 	if err != nil {
 		return nil, errors.Wrapf(err, "could not parse cron expression %q", expr)
@@ -39,4 +39,9 @@ func New(expr string) (jobs.Expression, error) {
 	return &Expression{
 		Expression: cronexpr,
 	}, nil
+}
+
+// Short to NewExpression func.
+func New(expr string) (jobs.Expression, error) {
+	return NewExpression(expr)
 }
