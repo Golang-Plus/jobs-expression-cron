@@ -1,0 +1,13 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "5DBIm/bJOKLR3CbQH6wIELQDLlQ=",
+			"path": "github.com/gorhill/cronexpr",
+			"revision": "d520615e531a6bf3fb69406b9eba718261285ec8",
+			"revisionTime": "2016-12-05T14:13:22Z"
+		}
+	],
+	"rootPath": "github.com/golang-plus/jobs-expression-cron"
+}
